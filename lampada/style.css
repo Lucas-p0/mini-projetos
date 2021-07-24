@@ -23,5 +23,16 @@ footer p{
 .btnCenter{
     display: flex;
     justify-content: center;
-        
+}
+.btn{
+    margin: 10px 0;
+    width: 100px;
+    background-color:#3498db;
+    border-radius: 4px;
+    border: solid;
+    border-width: 1px;   
+}
+.btn:hover{
+    background-color: #a1defd;
+    transition: 1s;
 }
