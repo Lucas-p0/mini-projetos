@@ -20,7 +20,7 @@ function verificar() {
             if (idade >= 0 && idade < 10) {
                 //criança
                 //img.setAttribute('src', '/ex015/img/fotoCriancaMasc.png')
-                img.src = 'img/foto-Crianca-Masc.png'
+                img.src = '/verificadorDeIdade/img/foto-Crianca-Masc.png'
                 document.body.style.background = '#F97F15'
             } else if (idade < 21) {
                 //Jovem
@@ -36,6 +36,7 @@ function verificar() {
             genero = 'mulher'
             if (idade >= 0 && idade < 10) {
                 //criança
+                img.src = '/verificadorDeIdade/img/fotoCriancaFem.png'
             } else if (idade < 21) {
                 //Jovem
             } else if (idade < 50) {
