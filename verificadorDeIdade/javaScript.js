@@ -3,7 +3,7 @@ function verificar() {
     var ano = data.getFullYear()
     var fano = document.getElementById('txtAno')
     var res = document.querySelector('div#res')
-    var img = document.getElementById('imagem')
+    const img = document.getElementById('imagem')
 
 
     if (fano.value.length == 0 || fano.value > ano) {
@@ -12,25 +12,23 @@ function verificar() {
         var fsex = document.getElementsByName('radsex')
         var idade = ano - Number(fano.value)
         var genero = ''
-        //var img = document.createElement('img')
-        //img.setAttribute('id', 'foto')
+
 
         if (fsex[0].checked) {
             genero = 'homem'
             if (idade >= 0 && idade < 10) {
                 //criança
-                //img.setAttribute('src', '/ex015/img/fotoCriancaMasc.png')
-                img.src = '/verificadorDeIdade/img/foto-Crianca-Masc.png'
+                img.src = './img/foto-Crianca-Masc.png'
                 document.body.style.background = '#F97F15'
             } else if (idade < 21) {
                 //Jovem
-                img.src = '/img/fotoCriancaMasc.png'
+                img.src = './img/fotoJovemMasc.png'
             } else if (idade < 50) {
                 //adulto
-                img.src = '/img/fotoCriancaMasc.png'
+                img.src = './img/fotoAdultoMasc.png'
             } else {
                 //idoso
-                img.src = '/img/fotoCriancaMasc.png'
+                img.src = './img/fotoIdosoMasc.png'
             }
         } else if (fsex[1].checked) {
             genero = 'mulher'
@@ -45,7 +43,7 @@ function verificar() {
                 //idoso
             }
         }
-        img.setAttribute('src', 'fotoCriancaMasc.png')
+
         res.innerHTML = `Detectamos um(a) ${genero} com ${idade} anos.`
     }
 }
