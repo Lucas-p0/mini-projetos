@@ -6,6 +6,7 @@ let intervalid = null
 const trafficLight = (event) => {
     turnOn[event.target.id]();
 }
+const nextIndex
 const chargeColor = () => {
     const colors = ['red', 'yellow', 'green']
     const color = colors;
